@@ -1,6 +1,6 @@
 # Đồ án môn Internet và công nghệ Web - IE104.P21.VB2
 
-## Mô tả đ án
+## Mô tả đồ án
 
 Không sử dụng thư viện hoặc framework CSS/JS có sẵn như Bootstrap, jQuery.
 Tập trung vào kỹ năng code thuần (Vanilla HTML, CSS, JavaScript).
