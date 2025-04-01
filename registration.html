@@ -10,6 +10,85 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
-    <h1>AAA</h1>
+    <h1>Create an Account</h1>
+    <form
+      method="post"
+      action="https://api-gateway.fullstack.edu.vn/action_page.php"
+      name="register"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div>
+        <label for="user-title">Title<abbr title="required">&#42;</abbr></label>
+        <select
+          id="user-title"
+          name="user[title]"
+          class="title-select"
+          required
+          autofocus
+        >
+          <option value="">--Please select--</option>
+          <option value="Mr">Mr</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Ms">Ms</option>
+          <option value="Miss">Miss</option>
+          <option value="Dr">Dr</option>
+          <option value="Prof">Prof</option>
+          <option value="Rev">Rev</option>
+          <option value="Mx">Mx</option>
+        </select>
+      </div>
+      <div class="">
+        <label for="fname">First name<abbr title="required">&#42;</abbr></label>
+        <input id="fname" name="user[firstname]" required />
+      </div>
+      <div class="">
+        <label for="lname">Last name<abbr title="required">&#42;</abbr></label>
+        <input id="lname" type="text" name="user[lastname]" required />
+      </div>
+      <div class="">
+        <label for="registerEmail"
+          >Email<abbr title="required">&#42;</abbr></label
+        >
+        <input
+          type="email"
+          name="user[email]"
+          class=""
+          id="registerEmail"
+          required
+        />
+      </div>
+      <div class="">
+        <label for="registerPhone">Phone number</label>
+        <input type="tel" name="user[phone]" id="registerPhone" />
+      </div>
+      <div class="">
+        <label for="registerPassword"
+          >Password<abbr title="required">&#42;</abbr></label
+        >
+        <input
+          type="password"
+          name="user[password]"
+          id="registerPassword"
+          autocomplete="new-password"
+          required
+        />
+      </div>
+      <div class="">
+        <label for="confirmPassword"
+          >Confirm password<abbr title="required">&#42;</abbr></label
+        >
+        <input
+          type="password"
+          name="user[password_confirm]"
+          id="confirmPassword"
+          autocomplete="new-password"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <button class="btn" type="submit">Register</button>
+      </div>
+    </form>
   </body>
 </html>
