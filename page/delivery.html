@@ -1,0 +1,176 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Delivery</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            html, body{
+                background-color: #ffffff;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                width: 100%;
+                font-family: Arial, Helvetica, sans-serif;
+                color: inherit;
+            }
+            header{
+                background-color: #ffffff;
+                height: 100px;
+                width: 100%;
+                border-bottom: 1px solid #d3d3d3;
+                position: fixed;
+                z-index: 1000;
+                top: 0;
+                padding: 15px;
+            }
+
+            header nav ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+                list-style-type: none;
+            }
+
+            main{
+                flex: 1;
+                padding-top: 115px;
+            }
+
+            .delivery-container{
+                display: flex;
+                width: 100%;
+            }
+
+            .delivery-container .item{
+                flex: 2;
+                background-color: #ffffff;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .delivery-container .item .item__list{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                border: 1px solid #d3d3d3;
+                padding: 15px 15px;
+            }
+            .delivery-container .item .item__list img{
+                height: 150px;
+                width: 100px;
+            }
+
+            .delivery-container .payment{
+                flex: 1;
+                height: 350px;
+                position: sticky;
+                top: 115px;
+                background-color:#ffffff;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 15px;
+            }
+
+            .delivery-container .payment .payment__delivery{
+                border: 1px solid #d3d3d3;
+                padding: 12px;
+            }
+
+            .delivery-container .payment .payment__promotion{
+                border: 1px solid #d3d3d3;
+                padding: 12px;
+            }
+
+            .delivery-container .payment .payment__order{
+                border: 1px solid #d3d3d3;
+                padding: 12px;
+            }
+
+            #home--icon a{
+                text-decoration: none;
+            }
+
+            footer{
+                height: 80px;
+                border-top: 1px solid #d3d3d3;
+                display: flex;            /* Sử dụng Flexbox */
+                justify-content: center;  /* Căn giữa theo chiều ngang */
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./sample-for-delivery.html">Back to
+                            shopping</a></li>
+                    <li id="home--icon"><a
+                            href="./sample-for-delivery.html">Waterstone</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="delivery-container">
+                <div class="item">
+                    <div class="item__active">
+                        <button>Basket</button>
+                        <button>Delivery</button>
+                        <button>Payment</button>
+                    </div>
+                    <div class="item__message">
+                        <p>Your order qualifies for free UK delivery.</p>
+                    </div>
+                    <div class="item__list">
+                        <p>List items</p>
+                        <img src="../assets/img/books/book1-web-150-200.jpg"
+                            alt>
+                        <img src="../assets/img/books/book1-web-150-200.jpg"
+                            alt>
+                        <img src="../assets/img/books/book1-web-150-200.jpg"
+                            alt>
+                        <img src="../assets/img/books/book1-web-150-200.jpg"
+                            alt>
+                        <img src="../assets/img/books/book1-web-150-200.jpg"
+                            alt>
+                        <img src="../assets/img/books/book1-web-150-200.jpg"
+                            alt>
+                        <img src="../assets/img/books/book1-web-150-200.jpg"
+                            alt>
+                        <img src="../assets/img/books/book1-web-150-200.jpg"
+                            alt>
+                    </div>
+                </div>
+                <div class="payment">
+                    <div class="payment__delivery">
+                        <h3>Delivery options</h3>
+                        <p>option 1</p>
+                        <p>option 2</p>
+                        <p>option 3</p>
+                    </div>
+                    <div class="payment__promotion">
+                        <h4>Add promotion code</h4>
+                    </div>
+                    <div class="payment__order">
+                        <h3>Your order</h3>
+                        <h3>Total to pay</h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Đây là footer</p>
+        </footer>
+    </body>
+</html>

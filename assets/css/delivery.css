@@ -1,0 +1,55 @@
+/*General setup*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: inherit;
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid #d3d3d3;
+    padding: 0 15px;
+    align-content: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+li{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    padding: 0 15px;
+}
+
+footer{
+    height: 80px;
+    width: 100%;
+    border-top: 1px solid #d3d3d3;
+    padding: 0 15px;
+}
+
+#book-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 15px 15px;
+}
