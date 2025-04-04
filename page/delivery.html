@@ -57,12 +57,15 @@
                 flex-direction: column;
                 gap: 10px;
             }
+            .delivery-container .item .item__message{
+                background-color: #E0E9ED;
+            }
             .delivery-container .item .item__list{
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
                 border: 1px solid #d3d3d3;
-                padding: 15px 15px;
+                
             }
             .delivery-container .item .item__list img{
                 height: 150px;
@@ -100,6 +103,39 @@
                 text-decoration: none;
             }
 
+            #item-container{
+                display: flex;
+                flex-direction: column;
+            }
+            .cart__item{
+                display: flex;
+                gap: 30px;
+                height: 250px;
+                border-bottom: 1px dotted #d3d3d3;
+                width: 100%;
+                padding: 30px 15px ;
+            }
+            .cart__item--content{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                height: 250px;
+                width: 100%;
+                padding: 0 15px;
+            }
+            .cart__item--quantity-total-price{
+                display: flex;
+                justify-content:space-between;
+                width: 100%;
+            }
+            .cart__item select{
+                width: 48px;
+                height: 48px;
+                border: 2.5px solid #cacaca !important;
+            }
+            .total-price-display{
+                padding: 0 30px;
+            }
             footer{
                 height: 80px;
                 border-top: 1px solid #d3d3d3;
@@ -133,23 +169,7 @@
                         <p>Your order qualifies for free UK delivery.</p>
                     </div>
                     <div class="item__list">
-                        <p>List items</p>
-                        <img src="../assets/img/books/book1-web-150-200.jpg"
-                            alt>
-                        <img src="../assets/img/books/book1-web-150-200.jpg"
-                            alt>
-                        <img src="../assets/img/books/book1-web-150-200.jpg"
-                            alt>
-                        <img src="../assets/img/books/book1-web-150-200.jpg"
-                            alt>
-                        <img src="../assets/img/books/book1-web-150-200.jpg"
-                            alt>
-                        <img src="../assets/img/books/book1-web-150-200.jpg"
-                            alt>
-                        <img src="../assets/img/books/book1-web-150-200.jpg"
-                            alt>
-                        <img src="../assets/img/books/book1-web-150-200.jpg"
-                            alt>
+                        <div id="item-container"></div>
                     </div>
                 </div>
                 <div class="payment">
@@ -163,8 +183,15 @@
                         <h4>Add promotion code</h4>
                     </div>
                     <div class="payment__order">
-                        <h3>Your order</h3>
-                        <h3>Total to pay</h3>
+                        <div class="payment__order your__order">
+                            <h3>Your order</h3>
+                            <p id="items-order"></p>
+                            <p>Subtotal VAT</p>
+                        </div>
+                        <div class="payment__order total__pay">
+                            <h3>Total to pay</h3>
+                            <p>1000</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,5 +199,6 @@
         <footer>
             <p>Đây là footer</p>
         </footer>
+        <script src="../assets/js/delivery.js" type="module"></script>
     </body>
 </html>
