@@ -18,40 +18,41 @@ body {
   color: #000;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.container {
-  max-width: 785px;
+/* Register Form */
+
+.register-container {
+  max-width: 800px;
   margin: 0 auto;
   min-height: 100vh;
 }
 .title-registration {
-  padding-top: 30px;
+  padding: 30px 8px 0;
   text-align: center;
   font-size: 1.6rem;
   font-weight: 700;
 }
 .title-desc {
-  padding: 20px 8px 60px;
+  padding: 10px 8px 60px;
   text-align: center;
   font-size: 1.4rem;
 }
-
-.register-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.register {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .register__form-row {
   display: flex;
-  flex: 1;
-  flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .register__label,
 .register-input {
   display: block;
-  min-width: 250px;
+  min-width: 270px;
+  height: 40px;
   padding: 10px 0;
 }
 .register-input {
@@ -59,21 +60,75 @@ body {
   border: 1px solid #8f959e;
   border-radius: 8px;
 }
-.register-input:focus-visible {
+.register-input:focus-within {
   outline: 2px solid var(--primary-color);
   box-shadow: 0 0 5px var(--primary-color);
 }
+/* Checkbox */
+.checkbox {
+  margin-bottom: 10px;
+}
+.checkbox:last-of-type {
+  margin-bottom: 30px;
+}
+.checkbox__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__label::before,
+.checkbox__label::after {
+  content: "";
+  display: inline-block;
+}
+
+.checkbox__label::before {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkbox__input:checked ~ .checkbox__label::before {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  outline: 2px solid var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.checkbox__input:checked ~ .checkbox__label::after {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 9px;
+  height: 5px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  rotate: -45deg;
+}
+.term-link {
+  text-decoration: underline;
+  color: black;
+}
+
 .btn {
-  min-width: 250px;
-  height: 36px;
+  display: block;
+  margin: 0 auto;
   padding: 8px 16px;
+  min-width: 250px;
+  height: 40px;
   font-size: 1.6rem;
   color: #fff;
   border: none;
   border-radius: 8px;
   background-color: var(--primary-color);
 }
+.btn:focus-within,
 .btn:hover {
+  outline: 2px solid var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
   opacity: 0.9;
   cursor: pointer;
 }
