@@ -8,8 +8,170 @@
     <!-- Reset.css using to reset style -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
   </head>
   <body>
-    <h1>AAA</h1>
+    <!-- Header - Using auto load header-->
+    <header id="header"></header>
+    <script>
+      load("#header", "./template/header.html");
+    </script>
+    <!-- Main -->
+    <div class="container">
+      <!-- Title -->
+      <h1 class="title-registration">Create an Account</h1>
+      <p class="title-desc">
+        Start your <em>VN BookStore</em> journey by creating your account.
+      </p>
+      <!-- Form -->
+      <form
+        class="register"
+        method="post"
+        action="https://api-gateway.fullstack.edu.vn/action_page.php"
+        name="register"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div class="register__form-row">
+          <div class="register__form-group">
+            <!--Dùng for=id để tối ưu UX. khi người dùng nhấn vào phần nhãn cũng tương tự như nhấn vào input -->
+            <label for="user-title"
+              >Title<abbr title="required">&#42;</abbr></label
+            >
+            <select
+              class="register-select register-input"
+              id="user-title"
+              name="user[title]"
+              class="title-select"
+              required
+              autofocus
+            >
+              <option value="">--Please select--</option>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Ms">Ms</option>
+              <option value="Miss">Miss</option>
+              <option value="Dr">Dr</option>
+              <option value="Prof">Prof</option>
+              <option value="Rev">Rev</option>
+              <option value="Mx">Mx</option>
+            </select>
+          </div>
+        </div>
+        <div class="register__form-row">
+          <div class="register__form-group">
+            <label class="register__label" for="fname"
+              >First name<abbr title="required">&#42;</abbr></label
+            >
+            <input
+              class="register-input"
+              type="text"
+              placeholder="Enter first name"
+              id="fname"
+              name="user[firstname]"
+              required
+            />
+          </div>
+          <div class="register__form-group">
+            <label class="register__label" for="lname"
+              >Last name<abbr title="required">&#42;</abbr></label
+            >
+            <input
+              class="register-input"
+              type="text"
+              placeholder="Enter last name"
+              id="lname"
+              name="user[lastname]"
+              required
+            />
+          </div>
+        </div>
+        <div class="register__form-row">
+          <div class="register__form-group">
+            <label class="register__label" for="registerEmail"
+              >Email<abbr title="required">&#42;</abbr></label
+            >
+            <input
+              class="register-input"
+              type="email"
+              name="user[email]"
+              class=""
+              id="registerEmail"
+              placeholder="Enter email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            />
+            <!-- Regular Expression Validation email-->
+          </div>
+          <div class="register__form-group">
+            <label class="register__label" for="registerPhone"
+              >Phone number</label
+            >
+            <input
+              class="register-input"
+              type="tel"
+              name="user[phone]"
+              id="registerPhone"
+              placeholder="Enter phone number"
+            />
+          </div>
+        </div>
+        <div class="register__form-row">
+          <div class="register__form-group">
+            <label class="register__label" for="registerPassword"
+              >Password<abbr title="required">&#42;</abbr></label
+            >
+            <input
+              class="register-input"
+              type="password"
+              name="user[password]"
+              id="registerPassword"
+              autocomplete="new-password"
+              required
+              placeholder="Enter password"
+            />
+          </div>
+          <div class="register__form-group">
+            <label class="register__label" for="confirmPassword"
+              >Confirm password<abbr title="required">&#42;</abbr></label
+            >
+            <input
+              class="register-input"
+              type="password"
+              name="user[password_confirm]"
+              id="confirmPassword"
+              autocomplete="new-password"
+              required
+              placeholder="Enter password again"
+            />
+          </div>
+        </div>
+        <div class="register__form-row">
+          <button class="btn" type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <script>
+      load("#footer", "./template/footer.html");
+    </script>
   </body>
 </html>
