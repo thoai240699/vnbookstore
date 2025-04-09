@@ -33,7 +33,7 @@
       load("#header", "./template/header.html");
     </script>
     <!-- Main -->
-    <div class="container">
+    <div class="register-container">
       <!-- Title -->
       <h1 class="title-registration">Create an Account</h1>
       <p class="title-desc">
@@ -48,32 +48,6 @@
         rel="noopener noreferrer"
         target="_blank"
       >
-        <div class="register__form-row">
-          <div class="register__form-group">
-            <!--Dùng for=id để tối ưu UX. khi người dùng nhấn vào phần nhãn cũng tương tự như nhấn vào input -->
-            <label for="user-title"
-              >Title<abbr title="required">&#42;</abbr></label
-            >
-            <select
-              class="register-select register-input"
-              id="user-title"
-              name="user[title]"
-              class="title-select"
-              required
-              autofocus
-            >
-              <option value="">--Please select--</option>
-              <option value="Mr">Mr</option>
-              <option value="Mrs">Mrs</option>
-              <option value="Ms">Ms</option>
-              <option value="Miss">Miss</option>
-              <option value="Dr">Dr</option>
-              <option value="Prof">Prof</option>
-              <option value="Rev">Rev</option>
-              <option value="Mx">Mx</option>
-            </select>
-          </div>
-        </div>
         <div class="register__form-row">
           <div class="register__form-group">
             <label class="register__label" for="fname"
@@ -163,8 +137,41 @@
           </div>
         </div>
         <div class="register__form-row">
-          <button class="btn" type="submit">Register</button>
+          <div class="checkbox">
+            <input
+              type="checkbox"
+              class="checkbox__input"
+              id="opt_into_marketing"
+              value="1"
+              name="opt_into_marketing"
+              required
+              hidden
+            />
+            <label for="opt_into_marketing" class="checkbox__label"
+              >Receive reading recommendations straight to your inbox.</label
+            >
+          </div>
         </div>
+        <div class="register__form-row">
+          <div class="checkbox">
+            <input
+              type="checkbox"
+              class="checkbox__input"
+              id="agree_terms_conditions"
+              value="1"
+              name="agree_terms_conditions"
+              required
+              hidden
+            />
+            <label for="agree_terms_conditions" class="checkbox__label">
+              <pre>I agree to the VN BookStore </pre>
+              <a class="term-link" href="#!" target="_blank" rel="noopener"
+                >Terms &amp; Conditions</a
+              >.
+            </label>
+          </div>
+        </div>
+        <button class="btn" type="submit">Register</button>
       </form>
     </div>
 
