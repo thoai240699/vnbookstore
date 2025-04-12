@@ -33,10 +33,10 @@
       load("#header", "./template/header.html");
     </script>
     <!-- Main -->
-    <div class="register-container">
+    <main class="form-container">
       <!-- Title -->
-      <h1 class="title-registration">Create an Account</h1>
-      <p class="title-desc">
+      <h1 class="form-title">Create an Account</h1>
+      <p class="form-desc">
         Start your <em>VN BookStore</em> journey by creating your account.
       </p>
       <!-- Form -->
@@ -45,29 +45,28 @@
         method="post"
         action="https://api-gateway.fullstack.edu.vn/action_page.php"
         name="register"
-        rel="noopener noreferrer"
-        target="_blank"
       >
-        <div class="register__form-row">
-          <div class="register__form-group">
-            <label class="register__label" for="fname"
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form__label" for="fname"
               >First name<abbr title="required">&#42;</abbr></label
             >
             <input
-              class="register-input"
+              class="form__input"
               type="text"
               placeholder="Enter first name"
               id="fname"
               name="user[firstname]"
+              autofocus
               required
             />
           </div>
-          <div class="register__form-group">
-            <label class="register__label" for="lname"
+          <div class="form-group">
+            <label class="form__label" for="lname"
               >Last name<abbr title="required">&#42;</abbr></label
             >
             <input
-              class="register-input"
+              class="form__input"
               type="text"
               placeholder="Enter last name"
               id="lname"
@@ -76,13 +75,13 @@
             />
           </div>
         </div>
-        <div class="register__form-row">
-          <div class="register__form-group">
-            <label class="register__label" for="registerEmail"
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form__label" for="registerEmail"
               >Email<abbr title="required">&#42;</abbr></label
             >
             <input
-              class="register-input"
+              class="form__input"
               type="email"
               name="user[email]"
               class=""
@@ -93,12 +92,10 @@
             />
             <!-- Regular Expression Validation email-->
           </div>
-          <div class="register__form-group">
-            <label class="register__label" for="registerPhone"
-              >Phone number</label
-            >
+          <div class="form-group">
+            <label class="form__label" for="registerPhone">Phone number</label>
             <input
-              class="register-input"
+              class="form__input"
               type="tel"
               name="user[phone]"
               id="registerPhone"
@@ -106,13 +103,13 @@
             />
           </div>
         </div>
-        <div class="register__form-row">
-          <div class="register__form-group">
-            <label class="register__label" for="registerPassword"
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form__label" for="registerPassword"
               >Password<abbr title="required">&#42;</abbr></label
             >
             <input
-              class="register-input"
+              class="form__input"
               type="password"
               name="user[password]"
               id="registerPassword"
@@ -121,12 +118,12 @@
               placeholder="Enter password"
             />
           </div>
-          <div class="register__form-group">
-            <label class="register__label" for="confirmPassword"
+          <div class="form-group">
+            <label class="form__label" for="confirmPassword"
               >Confirm password<abbr title="required">&#42;</abbr></label
             >
             <input
-              class="register-input"
+              class="form__input"
               type="password"
               name="user[password_confirm]"
               id="confirmPassword"
@@ -136,44 +133,39 @@
             />
           </div>
         </div>
-        <div class="register__form-row">
-          <div class="checkbox">
-            <input
-              type="checkbox"
-              class="checkbox__input"
-              id="opt_into_marketing"
-              value="1"
-              name="opt_into_marketing"
-              required
-              hidden
-            />
-            <label for="opt_into_marketing" class="checkbox__label"
-              >Receive reading recommendations straight to your inbox.</label
-            >
-          </div>
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            class="checkbox__input"
+            id="opt_into_marketing"
+            value="1"
+            name="opt_into_marketing"
+            hidden
+          />
+          <label for="opt_into_marketing" class="checkbox__label"
+            >Receive reading recommendations straight to your inbox.</label
+          >
         </div>
-        <div class="register__form-row">
-          <div class="checkbox">
-            <input
-              type="checkbox"
-              class="checkbox__input"
-              id="agree_terms_conditions"
-              value="1"
-              name="agree_terms_conditions"
-              required
-              hidden
-            />
-            <label for="agree_terms_conditions" class="checkbox__label">
-              <pre>I agree to the VN BookStore </pre>
-              <a class="term-link" href="#!" target="_blank" rel="noopener"
-                >Terms &amp; Conditions</a
-              >.
-            </label>
-          </div>
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            class="checkbox__input"
+            id="agree_terms_conditions"
+            value="1"
+            name="agree_terms_conditions"
+            required
+            hidden
+          />
+          <label for="agree_terms_conditions" class="checkbox__label">
+            <pre>I agree to the VN BookStore </pre>
+            <a class="term-link" href="#!" target="_blank" rel="noopener"
+              >Terms &amp; Conditions</a
+            >.
+          </label>
         </div>
         <button class="btn" type="submit">Register</button>
       </form>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer id="footer"></footer>

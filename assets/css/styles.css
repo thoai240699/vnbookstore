@@ -20,47 +20,48 @@ body {
 }
 /* Register Form */
 
-.register-container {
+.form-container {
   max-width: 800px;
   margin: 0 auto;
   min-height: 100vh;
 }
-.title-registration {
+.form-title {
   padding: 30px 8px 0;
   text-align: center;
   font-size: 1.6rem;
   font-weight: 700;
 }
-.title-desc {
+.form-desc {
   padding: 10px 8px 60px;
   text-align: center;
   font-size: 1.4rem;
 }
+.sign-in,
 .register {
   display: block;
   max-width: 600px;
   margin: 0 auto;
 }
-.register__form-row {
+.form-row {
   display: flex;
   gap: 30px;
   margin-bottom: 30px;
   flex-wrap: wrap;
   justify-content: center;
 }
-.register__label,
-.register-input {
+.form__label,
+.form__input {
   display: block;
   min-width: 270px;
   height: 40px;
   padding: 10px 0;
 }
-.register-input {
+.form__input {
   padding: 8px;
   border: 1px solid #8f959e;
   border-radius: 8px;
 }
-.register-input:focus-within {
+.form__input:focus-within {
   outline: 2px solid var(--primary-color);
   box-shadow: 0 0 5px var(--primary-color);
 }
@@ -131,4 +132,8 @@ body {
   box-shadow: 0 0 5px var(--primary-color);
   opacity: 0.9;
   cursor: pointer;
+}
+/* Sign in */
+.sign-in__form-row {
+  margin-bottom: 10px;
 }

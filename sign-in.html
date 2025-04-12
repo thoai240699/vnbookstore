@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VN BookStore | Sign-in</title>
+    <!-- Using relative link cmt by thoai -->
+    <!-- Reset.css using to reset style -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header - Using auto load header-->
+    <header id="header"></header>
+    <script>
+      load("#header", "./template/header.html");
+    </script>
+    <!-- Main -->
+    <main class="form-container">
+      <!-- Title -->
+      <h1 class="form-title">Hello Again!</h1>
+      <p class="form-desc">
+        Welcome back to sign in. As a returning customer, you have access to
+        your previously saved all information.
+      </p>
+      <!-- Form -->
+      <form
+        class="sign-in"
+        method="post"
+        action="https://api-gateway.fullstack.edu.vn/action_page.php"
+        name="sign-in"
+      >
+        <div class="form-row">
+          <div class="form-group">
+            <input
+              class="form__input"
+              type="email"
+              name="user[email]"
+              class=""
+              placeholder="Email"
+              required
+              autofocus
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            />
+          </div>
+          <!-- Regular Expression Validation email-->
+        </div>
+        <div class="form-row sign-in__form-row">
+          <div class="form-group">
+            <input
+              class="form__input"
+              type="password"
+              name="user[password]"
+              required
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <div class="form-row sign-in__form-row">
+          <div class="checkbox">
+            <input
+              type="checkbox"
+              class="checkbox__input"
+              id="remember-me"
+              value="1"
+              name="rememberMe"
+              required
+              hidden
+            />
+            <label for="remember-me" class="checkbox__label">Remember me</label>
+          </div>
+        </div>
+        <button class="btn" type="submit">Sign in</button>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <script>
+      load("#footer", "./template/footer.html");
+    </script>
+  </body>
+</html>
