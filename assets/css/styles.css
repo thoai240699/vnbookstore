@@ -72,10 +72,11 @@ body {
 .checkbox:last-of-type {
   margin-bottom: 30px;
 }
+
 .checkbox__label {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Chỉnh center thành flex-start để fix lỗi dấu check nhảy khi label có 2 dòng*/
 }
 
 .checkbox__label::before,
@@ -99,15 +100,16 @@ body {
   box-shadow: 0 0 5px var(--primary-color);
 }
 
+/* This pseudo-element creates a checkmark when the checkbox is checked */
 .checkbox__input:checked ~ .checkbox__label::after {
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: 4px;
   width: 9px;
   height: 5px;
   border-left: 2px solid #fff;
   border-bottom: 2px solid #fff;
-  rotate: -45deg;
+  transform: rotate(-45deg);
 }
 .term-link {
   text-decoration: underline;
