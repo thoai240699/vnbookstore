@@ -9,6 +9,17 @@
 a,
 abbr {
   text-decoration: none;
+  color: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Baskerville, serif;
+  font-weight: 500;
+  color: #000;
+  font-size: 2.8rem;
 }
 body {
   font-family: "Source Sans Pro", Arial, sans-serif;
@@ -36,7 +47,7 @@ body {
   text-align: center;
   font-size: 1.4rem;
 }
-.sign-in,
+
 .register {
   display: block;
   max-width: 600px;
@@ -120,7 +131,7 @@ body {
   display: block;
   margin: 0 auto;
   padding: 8px 16px;
-  min-width: 250px;
+  width: 250px;
   height: 40px;
   font-size: 1.6rem;
   color: #fff;
@@ -136,6 +147,71 @@ body {
   cursor: pointer;
 }
 /* Sign in */
-.sign-in__form-row {
+.modal {
+  position: fixed;
+  display: flex;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1; /*fix tình trạng nhìn xuyên quan nền*/
+}
+.modal__sign-in {
+  margin: auto;
+  width: min(400px, 100%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Tạo hiệu ứng nổi */
+}
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  border-radius: 8px 8px 0 0; /* fix lỗi bg color header che mất boder-radius thẻ cha*/
+}
+.modal__title {
+  font-size: 2rem;
+  color: #fff;
+  font-style: italic;
+}
+.modal__sign-in--close {
+  font-size: 40px;
+  color: #fff;
+}
+.modal__body {
+  padding: 10px 20px;
+}
+.modal__register {
+  display: flex;
+  padding-bottom: 10px;
+}
+.modal__register-here {
+  margin-left: auto;
+}
+.modal__register-link {
+  text-decoration: underline;
+  color: #000;
+}
+
+.sign-in__input {
+  display: block; /*Ghi đè lại flex và gap của register input để with 100%*/
   margin-bottom: 10px;
+  width: 100%;
+}
+.sign-in__form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /*Cách thẻ reset password*/
+}
+.sign-in__btn {
+  width: 110px;
+  margin: 0;
+}
+.sign-in__checkbox {
+  margin: 0; /*Ghi đè lại register */
+}
+.sign-in__checkbox:last-of-type {
+  margin: 0; /*Ghi đè lại register */
 }

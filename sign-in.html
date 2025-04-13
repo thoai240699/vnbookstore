@@ -41,54 +41,6 @@
         your previously saved all information.
       </p>
       <!-- Form -->
-      <form
-        class="sign-in"
-        method="post"
-        action="https://api-gateway.fullstack.edu.vn/action_page.php"
-        name="sign-in"
-      >
-        <div class="form-row">
-          <div class="form-group">
-            <input
-              class="form__input"
-              type="email"
-              name="user[email]"
-              class=""
-              placeholder="Email"
-              required
-              autofocus
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            />
-          </div>
-          <!-- Regular Expression Validation email-->
-        </div>
-        <div class="form-row sign-in__form-row">
-          <div class="form-group">
-            <input
-              class="form__input"
-              type="password"
-              name="user[password]"
-              required
-              placeholder="Password"
-            />
-          </div>
-        </div>
-        <div class="form-row sign-in__form-row">
-          <div class="checkbox">
-            <input
-              type="checkbox"
-              class="checkbox__input"
-              id="remember-me"
-              value="1"
-              name="rememberMe"
-              required
-              hidden
-            />
-            <label for="remember-me" class="checkbox__label">Remember me</label>
-          </div>
-        </div>
-        <button class="btn" type="submit">Sign in</button>
-      </form>
     </main>
 
     <!-- Footer -->
