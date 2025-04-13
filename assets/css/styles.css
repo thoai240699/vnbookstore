@@ -215,3 +215,6 @@ body {
 .sign-in__checkbox:last-of-type {
   margin: 0; /*Ghi đè lại register */
 }
+.sign-in__reset-password {
+  text-decoration: underline;
+}
