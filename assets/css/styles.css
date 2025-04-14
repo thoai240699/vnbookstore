@@ -39,7 +39,7 @@ body {
 .form-title {
   padding: 30px 8px 0;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 .form-desc {
@@ -149,7 +149,7 @@ body {
 /* Sign in */
 .modal {
   position: fixed;
-  display: flex;
+  display: none;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1; /*fix tình trạng nhìn xuyên quan nền*/

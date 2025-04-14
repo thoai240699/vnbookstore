@@ -1,16 +1,18 @@
 <div class="header__inner">
   <h2>Header content - Tự động load cho tất cả các trang.</h2>
 
+  <div class="inner">
+    <a href="#!" class="js-open-modal">Sign In</a>
+    <a href="../registration.html">Register</a>
+  </div>
   <!-- Modal sign in -->
   <div class="modal">
     <div class="modal__sign-in">
       <header class="modal__header">
         <h3 class="modal__title">Sign In / Register</h3>
-        <a id="modal__sign-in__close" href="#!" class="modal__sign-in--close"
-          >×</a
-        >
+        <a href="#!" class="modal__sign-in--close js-close-modal">×</a>
       </header>
-      <main class="modal__body">
+      <div class="modal__body">
         <div class="modal__register">
           <span class="modal__register-here"
             >Not registered?
@@ -66,7 +68,7 @@
           </div>
           <a href="#!" class="sign-in__reset-password">Reset password</a>
         </form>
-      </main>
+      </div>
     </div>
   </div>
 </div>
