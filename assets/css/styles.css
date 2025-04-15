@@ -10,6 +10,7 @@ a,
 abbr {
   text-decoration: none;
   color: #000;
+  color: inherit;
 }
 h1,
 h2,
@@ -56,7 +57,7 @@ body {
 .form-row {
   display: flex;
   gap: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -65,17 +66,34 @@ body {
   display: block;
   min-width: 270px;
   height: 40px;
-  padding: 10px 0;
+  padding: 5px 0;
 }
+.form__label {
+  height: 30px;
+}
+.form-message {
+  display: block;
+  padding: 2px 8px;
+}
+
 .form__input {
   padding: 8px;
   border: 1px solid #8f959e;
   border-radius: 8px;
 }
+.invalid {
+  color: red;
+  font-weight: 400;
+}
+.invalid .form__input {
+  border-color: red;
+}
 .form__input:focus-within {
+  border-color: #8f959e;
   outline: 2px solid var(--primary-color);
   box-shadow: 0 0 5px var(--primary-color);
 }
+
 /* Checkbox */
 .checkbox {
   margin: 10px 15px;

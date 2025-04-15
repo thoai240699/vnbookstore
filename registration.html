@@ -52,6 +52,7 @@
       <!-- Form -->
       <form
         class="register"
+        id="register-form"
         method="post"
         action="https://api-gateway.fullstack.edu.vn/action_page.php"
         name="register"
@@ -68,8 +69,8 @@
               id="fname"
               name="user[firstname]"
               autofocus
-              required
             />
+            <span class="form-message"></span>
           </div>
           <div class="form-group">
             <label class="form__label" for="lname"
@@ -81,8 +82,8 @@
               placeholder="Enter last name"
               id="lname"
               name="user[lastname]"
-              required
             />
+            <span class="form-message"></span>
           </div>
         </div>
         <div class="form-row">
@@ -97,9 +98,9 @@
               class=""
               id="registerEmail"
               placeholder="Enter email"
-              required
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             />
+            <span class="form-message"></span>
+            <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" -->
             <!-- Regular Expression Validation email-->
           </div>
           <div class="form-group">
@@ -111,6 +112,7 @@
               id="registerPhone"
               placeholder="Enter phone number"
             />
+            <span class="form-message"></span>
           </div>
         </div>
         <div class="form-row">
@@ -124,9 +126,10 @@
               name="user[password]"
               id="registerPassword"
               autocomplete="new-password"
-              required
               placeholder="Enter password"
             />
+            <!-- autocomplete="new-password" Ngăn trình duyệt tự điền pass -->
+            <span class="form-message"></span>
           </div>
           <div class="form-group">
             <label class="form__label" for="confirmPassword"
@@ -138,9 +141,9 @@
               name="user[password_confirm]"
               id="confirmPassword"
               autocomplete="new-password"
-              required
               placeholder="Enter password again"
             />
+            <span class="form-message"></span>
           </div>
         </div>
         <div class="checkbox">
@@ -172,6 +175,7 @@
               >Terms &amp; Conditions</a
             >.
           </label>
+          <span class="form-message"></span>
         </div>
         <button class="btn" type="submit">Register</button>
       </form>
@@ -184,6 +188,19 @@
     </script>
     <!-- modal__sign-in__close -->
     <script src="./assets/js/openCloseModal.js"></script>
+    <!-- JS validation form -->
     <script src="./assets/js/validator.js"></script>
+    <script>
+      Validator({
+        form: "#register-form",
+        errorSelector: ".form-message",
+        rules: [
+          Validator.isFname("#fname"),
+          Validator.isLname("#lname"),
+          Validator.isEmail("#registerEmail"),
+          Validator.minLength("#registerPassword", 6),
+        ],
+      });
+    </script>
   </body>
 </html>
