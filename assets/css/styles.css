@@ -9,9 +9,9 @@
 a,
 abbr {
   text-decoration: none;
-  color: #000;
   color: inherit;
 }
+
 h1,
 h2,
 h3,
@@ -54,7 +54,7 @@ body {
   font-size: 1.4rem;
 }
 
-.register {
+.register-form {
   display: block;
   width: min(600px, 100%);
   margin: 0 auto;
@@ -80,7 +80,7 @@ body {
 }
 .form-message {
   display: block;
-  padding: 2px 8px;
+  padding-top: 4px;
 }
 
 .form__input {
@@ -103,16 +103,15 @@ body {
 
 /* Checkbox */
 .checkbox {
-  margin: 10px 15px;
+  margin: 10px 10px;
 }
 .checkbox:last-of-type {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .checkbox__label {
   position: relative;
   display: flex;
-  align-items: flex-start; /* Chỉnh center thành flex-start để fix lỗi dấu check nhảy khi label có 2 dòng*/
 }
 
 .checkbox__label::before,
@@ -122,6 +121,7 @@ body {
 }
 
 .checkbox__label::before {
+  flex-shrink: 0;
   width: 15px;
   height: 15px;
   margin-right: 8px;
@@ -149,7 +149,6 @@ body {
 }
 .term-link {
   text-decoration: underline;
-  color: black;
 }
 
 .btn {
@@ -157,7 +156,7 @@ body {
   margin: 0 auto;
   padding: 8px 16px;
   width: min(250px, 100%);
-  height: 40px;
+  min-height: 40px;
   font-size: 1.6rem;
   color: #fff;
   border: none;

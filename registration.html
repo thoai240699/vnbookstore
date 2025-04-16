@@ -54,7 +54,7 @@
       </div>
       <!-- Form -->
       <form
-        class="register"
+        class="register-form"
         id="register-form"
         method="post"
         action="https://api-gateway.fullstack.edu.vn/action_page.php"
@@ -140,7 +140,6 @@
             <input
               class="form__input"
               type="password"
-              name="user[password_confirm]"
               id="confirmPassword"
               autocomplete="new-password"
               placeholder="Enter password again"
@@ -158,7 +157,10 @@
             hidden
           />
           <label for="opt_into_marketing" class="checkbox__label">
-            <pre>Receive <strong>reading recommendations</strong> straight to your inbox.</pre>
+            <span>
+              Receive <strong>reading recommendations</strong> straight to your
+              inbox.</span
+            >
           </label>
         </div>
         <div class="checkbox">
@@ -166,16 +168,15 @@
             type="checkbox"
             class="checkbox__input"
             id="agree_terms_conditions"
-            value="1"
-            name="agree_terms_conditions"
-            required
             hidden
           />
           <label for="agree_terms_conditions" class="checkbox__label">
-            <pre>I <strong>agree</strong> to the VN BookStore </pre>
-            <a class="term-link" href="#!" target="_blank" rel="noopener"
-              >Terms &amp; Conditions</a
-            >.
+            <span>
+              I <strong>agree</strong> to the VN BookStore
+              <a class="term-link" href="#!" target="_blank" rel="noopener"
+                >Terms &amp; Conditions</a
+              >.
+            </span>
           </label>
           <span class="form-message"></span>
         </div>
@@ -197,10 +198,31 @@
         form: "#register-form",
         errorSelector: ".form-message",
         rules: [
-          Validator.isFname("#fname"),
-          Validator.isLname("#lname"),
+          Validator.isRequired("#fname", "Please enter your first name."),
+          Validator.isRequired("#lname", "Please enter your last name."),
+          Validator.isRequired("#registerEmail", "Please enter your email."),
           Validator.isEmail("#registerEmail"),
+          Validator.isRequired(
+            "#registerPassword",
+            "Please enter your password."
+          ),
           Validator.minLength("#registerPassword", 6),
+          Validator.isRequired(
+            "#confirmPassword",
+            "Please enter your password."
+          ),
+          Validator.isConfirmed(
+            "#confirmPassword",
+            function () {
+              return document.querySelector("#register-form #registerPassword")
+                .value;
+            },
+            "Your password does not match."
+          ),
+          Validator.isRequiredCheckbox(
+            "#agree_terms_conditions",
+            "You must agree to the Terms & Conditions."
+          ),
         ],
       });
     </script>
