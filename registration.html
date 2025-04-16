@@ -43,12 +43,15 @@
       load("#header", "./template/header.html");
     </script>
     <!-- Main -->
-    <main class="form-container">
+    <main class="container">
+      <!-- Form info -->
       <!-- Title -->
-      <h1 class="form-title">Create an Account</h1>
-      <p class="form-desc">
-        Start your <em>VN BookStore</em> journey by creating your account.
-      </p>
+      <div class="form-intro">
+        <h1 class="form-title">Create an Account</h1>
+        <p class="form-desc">
+          Start your <em>VN BookStore</em> journey by creating your account.
+        </p>
+      </div>
       <!-- Form -->
       <form
         class="register"
@@ -155,9 +158,9 @@
             name="opt_into_marketing"
             hidden
           />
-          <label for="opt_into_marketing" class="checkbox__label"
-            >Receive reading recommendations straight to your inbox.</label
-          >
+          <label for="opt_into_marketing" class="checkbox__label">
+            <pre>Receive <strong>reading recommendations</strong> straight to your inbox.</pre>
+          </label>
         </div>
         <div class="checkbox">
           <input
@@ -170,7 +173,7 @@
             hidden
           />
           <label for="agree_terms_conditions" class="checkbox__label">
-            <pre>I agree to the VN BookStore </pre>
+            <pre>I <strong>agree</strong> to the VN BookStore </pre>
             <a class="term-link" href="#!" target="_blank" rel="noopener"
               >Terms &amp; Conditions</a
             >.
