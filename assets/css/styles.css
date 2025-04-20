@@ -62,7 +62,7 @@ body {
 .form-row {
   display: flex;
   gap: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   /* flex-wrap: wrap; */
 }
 .form-group {
@@ -76,11 +76,12 @@ body {
   padding: 5px 0;
 }
 .form__label {
-  height: 30px;
+  height: auto;
 }
 .form-message {
   display: block;
   padding-top: 4px;
+  height: 22px;
 }
 
 .form__input {
@@ -95,23 +96,25 @@ body {
 .invalid .form__input {
   border-color: red;
 }
+
 .form__input:focus-within {
   border-color: #8f959e;
   outline: 2px solid var(--primary-color);
   box-shadow: 0 0 5px var(--primary-color);
 }
+.form-group:focus-within .form__label {
+  font-weight: 600;
+}
 
 /* Checkbox */
 .checkbox {
-  margin: 10px 10px;
-}
-.checkbox:last-of-type {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .checkbox__label {
   position: relative;
   display: flex;
+  width: 100%;
 }
 
 .checkbox__label::before,
@@ -170,6 +173,25 @@ body {
   opacity: 0.9;
   cursor: pointer;
 }
+/* responsive register page mobile */
+/* Breakpoints tham khảo bootstrap  */
+@media (max-width: 767.98px) {
+  .form-intro {
+    width: min(300px, 100%);
+    padding: 0 10px 10px;
+  }
+  .register-form {
+    width: min(300px, 100%);
+  }
+  .form-row {
+    display: block;
+    margin-bottom: 0;
+  }
+  .form__input {
+    padding: 5px 8px;
+  }
+}
+
 /* Sign in */
 .modal {
   position: fixed;
